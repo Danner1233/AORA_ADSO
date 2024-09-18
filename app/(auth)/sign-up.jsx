@@ -38,7 +38,7 @@ const SignUp = () => {
   };
 
   return (
-    <SafeAreaView className="bg-plattea h-full">
+    <SafeAreaView className="bg-primary h-full">
       <ScrollView>
         <View
           className="w-full flex justify-center h-full px-4 my-6"
@@ -49,15 +49,15 @@ const SignUp = () => {
           <Image
             source={images.logo}
             resizeMode="contain"
-            className="w-[200px] h-[100px]"
+            className="w-[115px] h-[34px]"
           />
 
           <Text className="text-2xl font-semibold text-white mt-10 font-psemibold">
-            Registrate en Plattea
+            Sign Up to Aora
           </Text>
 
           <FormField
-            title="Usuario"
+            title="Username"
             value={form.username}
             handleChangeText={(e) => setForm({ ...form, username: e })}
             otherStyles="mt-10"
@@ -72,14 +72,14 @@ const SignUp = () => {
           />
 
           <FormField
-            title="Contraseña"
+            title="Password"
             value={form.password}
             handleChangeText={(e) => setForm({ ...form, password: e })}
             otherStyles="mt-7"
           />
 
           <CustomButton
-            title="Registrate"
+            title="Sign Up"
             handlePress={submit}
             containerStyles="mt-7"
             isLoading={isSubmitting}
@@ -87,13 +87,13 @@ const SignUp = () => {
 
           <View className="flex justify-center pt-5 flex-row gap-2">
             <Text className="text-lg text-gray-100 font-pregular">
-              Ya tienes cuenta?
+              Have an account already?
             </Text>
             <Link
               href="/sign-in"
               className="text-lg font-psemibold text-secondary"
             >
-              Inicia Sesion
+              Login
             </Link>
           </View>
         </View>
